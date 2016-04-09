@@ -1,9 +1,25 @@
 body {
   padding: 50px;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url('../images/green_cup.png')
 }
 
-a {
-  color: #00B7FF;
+.main-nav-scrolled{
+  position: fixed;
+  width: 94.7%;
+  top: 0;
+}
+
+.main-nav{
+  margin-bottom: -50px;
+  z-index: 150;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+
+.main {
+  background: #f2f2e8;
+  padding: 110px 50px 50px;
+  column-count: 2;
+  column-gap: 40px;
 }
