@@ -3,7 +3,7 @@ html, body{
   height: 100%;
 }
 body {
-  padding: 50px;
+  padding: 50px 50px 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url('../images/green_cup.png')
 }
@@ -19,18 +19,49 @@ body {
 }
 .main-content{
   height: 100%;
-  text-align: center;
+  width: 100%;
+  display: table;
+  border: 1px solid #000000;
+  padding: 1em 1em 1em 1em;
+  margin:0;
+  z-index: 2;
 }
-.main-content .inner{
-  height: 100%;
-}
-.inner h2,h5,h6 {
+.inner {
+  border: 1px solid #000000;
+  display: table-cell;
   vertical-align: middle;
-  line-height: normal;
+  text-align: center;
+  padding:0;margin:0;
+  width: 100%;
+  height: 100%;
 }
 .main {
   background: #f2f2e8;
   padding: 110px 50px 50px;
+  min-height: 325px;
   width: 100%;
   height: 100%;
+}
+.btn-primary-outline {
+  border-color: #2c3e50;
+  color: #2c3e50;
+}
+.btn-xl {
+  padding: 15px 30px;
+  font-size: 15px;
+}
+a {
+  transition: all .43s;
+}
+.btn:hover{
+  background: #2c3e50 none;
+}
+.aboutme{
+  display: table;
+  width: 100%;
+  padding: 1em 1em 1em 1em;
+  background-color: #a3c7ff;
+}
+.aboutme .inner{
+  display: block;
 }
