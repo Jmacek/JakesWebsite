@@ -1,9 +1,5 @@
 "use strict";
-
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
-
+//Allows for navbar scrolling
 var mainNav = $(".main-nav"),
     mainNavScroll = "main-nav-scrolled";
    // padding = $('body').css('padding'); Unfortunately it needs to activate at 50 not 50px
