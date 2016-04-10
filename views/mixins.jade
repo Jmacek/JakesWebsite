@@ -2,7 +2,7 @@
 mixin nav(name, id, style)
     - var style = (typeof style === 'undefined') ? "default" : style
     nav( role="navigation", id="nav_bar", class=["navbar", "main-nav", "navbar-" + style] )
-        .navbar-header
+        .navbar-header.page-scroll
             button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="navbar")
                 span.sr-only Toggle navigation
                 span.icon-bar
@@ -18,7 +18,7 @@ mixin nav_right_link(href, active)
     ul.nav.navbar-nav.navbar-right
         li(class=active): a(href=href)
             block
-mixin nav_item(href, target, active)
+mixin nav_item(href, active, target)
     li(class=active): a( href=href target=target)
         block
 mixin nav_item_dropdown(href, active)

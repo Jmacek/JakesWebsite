@@ -1,4 +1,7 @@
 "use strict";
+//Initialize wow animations
+new WOW().init();
+
 //Allows for navbar scrolling
 var mainNav = $(".main-nav"),
     mainNavScroll = "main-nav-scrolled";
@@ -11,4 +14,12 @@ $(window).scroll(function(){
    else {
        mainNav.removeClass(mainNavScroll);
    }
+});
+//Scroll animation for page-scroll links
+$(".page-scroll").find("a").click(function(e) {
+    e.preventDefault();
+    var section = $(this).attr("href");
+    $("html, body").animate({
+        scrollTop: $(section).offset().top
+    });
 });
