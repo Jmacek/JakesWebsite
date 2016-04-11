@@ -5,12 +5,15 @@ html, body{
 body {
   padding: 50px 50px 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url('../images/green_cup.png')
+  background-image: url('../images/green_cup.png');
 }
 .main-nav-scrolled{
   position: fixed;
   width: calc(100% - 100px);
   top: 0;
+}
+.footer{
+  text-align: center;
 }
 .main-nav{
   margin-bottom: -50px;
@@ -61,6 +64,18 @@ a {
   padding: 1em 1em 1em 1em;
   background-color: #a3c7ff;
 }
-.aboutme .inner{
-  display: block;
+.section-heading{
+  margin-top: 0;
+}
+hr.light{
+  border-color: #0f0f0f;
+}
+hr {
+  max-width: 50px;
+  border-width: 3px;
+}
+.text-faded{
+  color: #4c5457;
+  line-height: 200%;
+  font-family: 'Open Sans', sans-serif;
 }
