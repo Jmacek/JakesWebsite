@@ -3,13 +3,13 @@ html, body{
   height: 100%;
 }
 body {
-  padding: 50px 25px 0;
+  padding: 50px 10px 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url('../images/green_cup.png');
 }
 .main-nav-scrolled{
   position: fixed;
-  width: calc(100% - 50px);
+  width: calc(100% - 20px);
   top: 0;
 }
 .footer{
