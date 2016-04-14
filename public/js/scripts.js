@@ -2,6 +2,22 @@
 //Initialize wow animations
 new WOW().init();
 
+//Resize main on document ready
+$(document).ready(function(){
+    $('.main').css("height", $(window).height());
+    $('.aboutme').css("height", $(window).height());
+    $('.projects').css("height", $(window).height());
+});
+
+//Resize screen to fit window width, to work around faulty height css property
+$(window).on('resize', function(){
+    $('.main').css("height", $(window).height());
+    $('.aboutme').css("height", $(window).height());
+    $('.projects').css("height", $(window).height());
+});
+
+
+
 //Allows for navbar scrolling
 var mainNav = $(".main-nav"),
     mainNavScroll = "main-nav-scrolled";
