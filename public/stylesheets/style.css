@@ -41,18 +41,55 @@ body {
 .main {
   background: #f2f2e8;
   padding: 110px 0 50px 0;
+  opacity: 0.8;
   min-height: 325px;
   margin-bottom: 75px;
   width: 100%;
   height: 100%;
 }
 .projects {
-  background: #f2f2e8;
-  padding: 110px 0 50px 0;
+  background: #b8a9f2;
+  opacity: 0.8;
+  padding: 110px 25px 50px 25px;
+  text-align: center;
 }
-.projects iframe {
-  display: block;
-  margin: 0 auto;
+.col-max {
+  /* custom max width */
+  max-width:320px;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
+.item {
+  width:100%;
+  height:100%;
+  border:1px solid #cecece;
+  padding:16px 8px;
+  background:#ededed;
+  background:-webkit-gradient(linear, left top, left bottom,color-stop(0%, #f4f4f4), color-stop(100%, #ededed));
+  background:-moz-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+  background:-ms-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+}
+/* content styles */
+.item {
+  display:table;
+}
+.content {
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+}
+.content:before {
+  /*content:"Project";*/
+  font-family:sans-serif;
+  font-size:12px;
+  letter-spacing:1px;
+  color:#747474;
 }
 .projects h1{
   text-align: center;
@@ -61,12 +98,27 @@ body {
   border-color: #2c3e50;
   color: #2c3e50;
 }
+.projects span {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+.projects a {
+  color: #8291b2;
+}
 .btn-xl {
   padding: 15px 30px;
   font-size: 15px;
 }
 a {
   transition: all .43s;
+}
+.projects .disabled {
+  pointer-events: none;
+  cursor: default;
 }
 .btn:hover{
   background: #2c3e50 none;
@@ -77,6 +129,7 @@ a {
   height: 100%;
   padding: 1em 1em 1em 1em;
   background-color: #a3c7ff;
+  opacity: 0.75;
   min-height: 325px;
   margin-bottom: 75px;
 }
@@ -106,5 +159,8 @@ hr {
   }
   .main-nav-scrolled {
     width: calc(100% - 20px) !important;
+  }
+  html,body,.main,.main-content,.inner,.aboutme {
+    height: auto !important;
   }
 }

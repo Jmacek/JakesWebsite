@@ -9,7 +9,7 @@ $(document).ready(function(){
     $('.projects').css("height", $(window).height());
 });
 
-//Resize screen to fit window width, to work around faulty height css property
+//Resize screen to fit window width, to work around buggy height css property
 $(window).on('resize', function(){
     $('.main').css("height", $(window).height());
     $('.aboutme').css("height", $(window).height());
