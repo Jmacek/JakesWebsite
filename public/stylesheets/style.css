@@ -56,9 +56,9 @@ body {
   padding: 110px 25px 50px 25px;
   text-align: center;
 }
-.col-max {
-  /* custom max width */
-  max-width:320px;
+.col-min {
+  min-width:320px;
+  min-height:120px;
 }
 .col-centered {
   display:inline-block;

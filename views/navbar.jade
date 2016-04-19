@@ -1,8 +1,10 @@
 +nav('Jake Macek', 'dropdown_menu', 'default')
     +nav_ul()
-        +nav_item('https://drive.google.com/file/d/0B5SVqDZWbTScQjBIeC1PMWw0Rm8/view', 'active', '_blank') Résumé
-        +nav_item('https://www.linkedin.com/in/jake-macek-a6399472', 'active', '_blank') LinkedIn
-        +nav_item('https://github.com/Jmacek', '', '_blank') GitHub
+        +nav_item_dropdown("#")(label="My Portfolio")
+            +nav_item('https://drive.google.com/file/d/0B5SVqDZWbTScQjBIeC1PMWw0Rm8/view', '', '_blank') Résumé
+            +nav_item('https://www.linkedin.com/in/jake-macek-a6399472', '', '_blank') LinkedIn
+            +nav_item('https://github.com/Jmacek', '', '_blank') GitHub
+        +nav_item('#aboutme', 'page-scroll') About me
         +nav_item('#projects', 'page-scroll') Projects
         +nav_item('#webapps', 'page-scroll disabled') WebApps
         +nav_item('#technologies', 'page-scroll disabled') Technologies
