@@ -39,7 +39,7 @@ body {
   height: 100%;
 }
 .main {
-  background: #f2f2e8;
+  background: #DADAD0;
   padding: 110px 0 50px 0;
   opacity: 0.8;
   min-height: 325px;
@@ -51,7 +51,7 @@ body {
   border: 1px solid transparent;
 }
 .projects {
-  background: #b8a9f2;
+  background: #DADAD0;
   opacity: 0.8;
   padding: 110px 25px 50px 25px;
   text-align: center;
@@ -142,7 +142,7 @@ a {
   width: 100%;
   height: 100%;
   padding: 1em 1em 1em 1em;
-  background-color: #a3c7ff;
+  background-color: #84A2D0;
   opacity: 0.75;
   min-height: 325px;
   margin-bottom: 75px;
