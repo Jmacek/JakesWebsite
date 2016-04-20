@@ -39,7 +39,7 @@ body {
   height: 100%;
 }
 .main {
-  background: #DADAD0;
+  background: #D2C5B0;
   padding: 110px 0 50px 0;
   opacity: 0.8;
   min-height: 325px;
@@ -51,7 +51,7 @@ body {
   border: 1px solid transparent;
 }
 .projects {
-  background: #DADAD0;
+  background: #D2C5B0;
   opacity: 0.8;
   padding: 110px 25px 50px 25px;
   text-align: center;
@@ -138,11 +138,12 @@ a {
   color: #ffffff;
 }
 .aboutme{
+  color: bisque;
   display: table;
   width: 100%;
   height: 100%;
   padding: 1em 1em 1em 1em;
-  background-color: #84A2D0;
+  background-color: #5F7286;
   opacity: 0.75;
   min-height: 325px;
   margin-bottom: 75px;
@@ -163,7 +164,7 @@ hr {
   border-width: 3px;
 }
 .text-faded{
-  color: #4c5457;
+  color: antiquewhite;
   line-height: 200%;
   font-family: 'Open Sans', sans-serif;
 }
