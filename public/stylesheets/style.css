@@ -53,11 +53,11 @@ body {
 .projects {
   background: #D2C5B0;
   opacity: 0.8;
-  padding: 110px 25px 50px 25px;
+  padding: 50px 25px 50px 25px;
   text-align: center;
 }
 .col-min {
-  min-width:320px;
+  min-width:300px;
   min-height:120px;
 }
 .col-centered {
@@ -178,5 +178,8 @@ hr {
   }
   html,body,.main,.main-content,.inner,.aboutme {
     height: auto !important;
+  }
+  .projects {
+    padding: 25px 0 25px 0;
   }
 }
