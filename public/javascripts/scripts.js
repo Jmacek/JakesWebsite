@@ -4,14 +4,12 @@ new WOW().init();
 
 //Resize main on document ready
 $(document).ready(function(){
-    $('.main').css("height", $(window).height());
-    $('.aboutme').css("height", $(window).height());
+    $('.content-div').css("min-height", $(window).height());
 });
 
 //Resize screen to fit window width, to work around buggy height css property
 $(window).on('resize', function(){
-    $('.main').css("height", $(window).height());
-    $('.aboutme').css("height", $(window).height());
+    $('.content-div').css("min-height", $(window).height());
 });
 
 
