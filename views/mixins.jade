@@ -19,7 +19,7 @@ mixin nav_right_link(href, active)
         li(class=active): a(href=href)
             block
 mixin nav_item(href, active, target)
-    li(class=active): a( href=href target=target)
+    li(class=active data-toggle="collapse" data-target=".in"): a( href=href target=target )
         block
 mixin nav_item_dropdown(href, active)
     li(class=["dropdown", active])
