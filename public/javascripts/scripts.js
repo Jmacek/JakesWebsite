@@ -12,7 +12,10 @@ $(window).on('resize', function(){
     $('.content-div').css("min-height", $(window).height());
 });
 
-
+//Auto hide navbar on selection
+$('.nav a').on('click', function(){
+    $('.navbar-toggle').click(); //bootstrap 3.x by Richard
+});
 
 //Allows for navbar scrolling
 var mainNav = $(".main-nav"),

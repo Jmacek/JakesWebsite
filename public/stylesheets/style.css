@@ -176,6 +176,11 @@ hr {
   .main-nav-scrolled {
     width: calc(100% - 20px) !important;
   }
+  .navbar {
+    top: 0;
+    position: fixed;
+    width: calc(100% - 20px) !important;
+  }
   html,body,.main,.main-content,.inner,.aboutme {
     height: auto !important;
   }
