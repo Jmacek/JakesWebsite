@@ -23,16 +23,14 @@ var server = http.createServer(app);
  */
 fs.access('jmacek_me.crt', function(err){
   if(err){
-    console.log("No CRT found, starting on HTTP");
+    console.log("No CRT found");
   }
   else{
-    var port = normalizePort(process.env.PORT || '443');
-    app.set('port', port);
     server = https.createServer({
       key: fs.readFileSync('jmacek.me.key'),
       cert: fs.readFileSync('jmacek_me.crt'),
       ca: [fs.readFileSync('jmacek_me.ca-bundle')]
-    });
+    }, app).listen(443);
   }
 });
 
