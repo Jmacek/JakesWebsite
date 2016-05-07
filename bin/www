@@ -30,7 +30,7 @@ fs.access('jmacek_me.crt', function(err){
     server = https.createServer({
       key: fs.readFileSync('jmacek.me.key'),
       cert: fs.readFileSync('jmacek_me.crt'),
-      ca: [fs.readFileSync('jmacek_me.ca-bundle')]
+      ca: [fs.readFileSync('jmacek_me.ca-bundle.crt')]
     }, app).listen(443);
   }
 });
