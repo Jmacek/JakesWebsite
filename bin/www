@@ -6,7 +6,9 @@
 
 var app = require('../app');
 var debug = require('debug')('JakesWebsite:server');
+var fs = require("fs");
 var http = require('http');
+var https = require('https');
 
 /**
  * Get port from environment and store in Express.
@@ -15,11 +17,25 @@ var http = require('http');
 var port = normalizePort(process.env.PORT || '80');
 app.set('port', port);
 
-/**
- * Create HTTP server.
- */
-
 var server = http.createServer(app);
+/**
+ * Create HTTP/HTTPS server.
+ */
+fs.access('jmacek_me.crt', function(err){
+  if(err){
+    console.log("No CRT found, starting on HTTP");
+  }
+  else{
+    var port = normalizePort(process.env.PORT || '443');
+    app.set('port', port);
+    server = https.createServer({
+      key: fs.readFileSync('jmacek.me.key'),
+      cert: fs.readFileSync('jmacek_me.crt'),
+      ca: [fs.readFileSync('jmacek_me.ca-bundle')]
+    });
+  }
+});
+
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -76,7 +92,6 @@ function onError(error) {
       throw error;
   }
 }
-
 /**
  * Event listener for HTTP server "listening" event.
  */
