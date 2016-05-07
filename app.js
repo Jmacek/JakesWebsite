@@ -32,6 +32,16 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+//redirect to https if active
+if(global.secureContext){
+  app.use(function(req, res, next){
+    if (!req.secure) {
+      return res.redirect('https://' + req.get('host') + req.url);
+    }
+    next();
+  });
+}
+
 // error handlers
 
 // development error handler

@@ -26,6 +26,7 @@ fs.access('jmacek_me.crt', function(err){
     console.log("No CRT found");
   }
   else{
+    global.secureContext = true;
     server = https.createServer({
       key: fs.readFileSync('jmacek.me.key'),
       cert: fs.readFileSync('jmacek_me.crt'),
