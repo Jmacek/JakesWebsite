@@ -22,8 +22,20 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//redirect to https if active
+if(global.secureContext){
+  app.use(function(req, res, next) {
+    if (!req.secure) {
+      return res.redirect('https://' + req.get('host') + req.url);
+    }
+    next();
+  });
+}
+
 app.use('/', routes);
 app.use('/users', users);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -32,15 +44,6 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-//redirect to https if active
-if(global.secureContext){
-  app.use(function(req, res, next){
-    if (!req.secure) {
-      return res.redirect('https://' + req.get('host') + req.url);
-    }
-    next();
-  });
-}
 
 // error handlers
 
