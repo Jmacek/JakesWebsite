@@ -3,5 +3,5 @@ node_modules
 npm-debug.log
 jmacek.me.key
 jmacek_me.crt
-jmacek_me.ca-bundle
+jmacek_me.ca-bundle*
 jmacek.me.csr
