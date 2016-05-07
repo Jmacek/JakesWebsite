@@ -24,9 +24,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Checking for use of https.......if someone knows a better way to do this, I would appreciate the information
-fs.access('jmacek_me.crt', function(err){
-  global.secureContext = !err;
-});
+try{
+  global.secureContext = true;
+  fs.accessSync('jmacek_me.crt', fs.F_OK);
+}
+catch (e) {
+  global.secureContext = false;
+}
 
 //redirect to https if active
 if(global.secureContext){
