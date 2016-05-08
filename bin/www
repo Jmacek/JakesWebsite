@@ -24,14 +24,17 @@ var server = http.createServer(app);
  */
 fs.access('jmacek_me.crt', function(err){
   if(err){
-    console.log("No CRT found");
+    console.log("No CRT found, starting on HTTP");
+    startHTTP();
   }
   else{
-    server = https.createServer({
+    https.createServer({
       key: fs.readFileSync('jmacek.me.key'),
       cert: fs.readFileSync('jmacek_me.crt'),
       ca: [fs.readFileSync('jmacek_me.ca-bundle.crt')]
     }, app).listen(443);
+    server.on('error', onError);
+    server.on('listening', onListening);
   }
 });
 
@@ -39,10 +42,11 @@ fs.access('jmacek_me.crt', function(err){
 /**
  * Listen on provided port, on all network interfaces.
  */
-
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+function startHTTP(){
+  server.listen(port);
+  server.on('error', onError);
+  server.on('listening', onListening);
+}
 
 /**
  * Normalize a port into a number, string, or false.
