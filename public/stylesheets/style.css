@@ -92,6 +92,9 @@ body {
   letter-spacing:1px;
   color:#747474;
 }
+.OCR:before {
+  content:"Japanese Handwriting Reader";
+}
 .ZeldAI:before {
   content:"ZeldAI";
 }
