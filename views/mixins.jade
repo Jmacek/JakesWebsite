@@ -14,9 +14,9 @@ mixin nav(name, id, style)
 mixin nav_ul()
     ul.nav.navbar-nav
         block
-mixin nav_right_link(href, active)
+mixin nav_right_link(href, active, target)
     ul.nav.navbar-nav.navbar-right
-        li(class=active): a(href=href)
+        li(class=active): a(rel="noopener noreferrer" href=href target=target )
             block
 mixin nav_item(href, active, target)
     li(class=active data-toggle="collapse" data-target=".in"): a(rel="noopener noreferrer" href=href target=target )

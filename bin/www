@@ -13,8 +13,9 @@ var https = require('https');
 /**
  * Get port from environment and store in Express.
  */
-
-var port = normalizePort(process.env.PORT || '3000');
+var httpPort = 3000;
+var httpsPort = 8000;
+var port = normalizePort(process.env.PORT || httpPort.toString());
 app.set('port', port);
 
 var server = http.createServer(app);
@@ -31,7 +32,8 @@ fs.access('jmacek_me.crt', function(err){
       key: fs.readFileSync('jmacek.me.key'),
       cert: fs.readFileSync('jmacek_me.crt'),
       ca: [fs.readFileSync('jmacek_me.ca-bundle.crt')]
-    }, app).listen(8000);
+    }, app).listen(httpsPort);
+    debug('Listening on port ' + 8000 + ' for HTTPS requests');
   }
 });
 
@@ -96,9 +98,11 @@ function onError(error) {
  */
 
 function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  if(!secureContext) {
+    var addr = server.address();
+    var bind = typeof addr === 'string'
+        ? 'pipe ' + addr
+        : 'port ' + addr.port;
+    debug('Listening on ' + bind + ' for HTTP requests');
+  }
 }

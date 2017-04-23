@@ -43,7 +43,6 @@ body {
   padding: 110px 0 50px 0;
   opacity: 0.8;
   min-height: 325px;
-  margin-bottom: 75px;
   width: 100%;
   height: 100%;
 }
@@ -101,6 +100,15 @@ body {
 .TypingWar:before {
   content:"Typing War";
 }
+.StockToYou:before {
+  content:"Stock To You";
+}
+.DailyProgrammer:before {
+  content:"Reddit's Daily Programmer";
+}
+.ProjectEuler:before {
+  content:"Project Euler Solutions";
+}
 .projects h1{
   text-align: center;
 }
@@ -155,12 +163,14 @@ a {
   background-color: #5F7286;
   opacity: 0.75;
   min-height: 325px;
-  margin-bottom: 75px;
 }
 .aboutme .aboutme-content{
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+}
+.margin-bottom {
+  margin-bottom: 75px;
 }
 .section-heading{
   margin-top: 0;
